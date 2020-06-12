@@ -1,0 +1,22 @@
+name: better_mistakes
+channels:
+    - pytorch
+    - anaconda
+    - menpo
+    - conda-forge
+dependencies:
+    - python=3.6
+    - pip
+    - numpy
+    - cudatoolkit=9.0
+    - pytorch=1.1
+    - torchvision
+    - nltk
+    - tensorboardX
+    - tensorflow
+    - git-lfs
+    - tensorboard
+    - pyyaml
+    - pip:
+        - git+https://github.com/facebookresearch/fastText.git
+        - conditional
