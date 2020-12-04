@@ -74,7 +74,7 @@ class HierarchicalLLLoss(torch.nn.Module):
                 self.weights[i, j] = get_label(weights[positions_edges[k]])
             for j, k in enumerate(edges_from_leaf[i][1:]):
                 self.onehot_den[i, leaf_indices[k], j] = 1.0
-            self.onehot_den[i, :, j + 1] = 1.0  # the last denominator is the sum of all leaves
+            self.onehot_den[i, :,  len(edges_from_leaf) - 1] = 1.0  # the last denominator is the sum of all leaves
 
     def forward(self, inputs, target):
         """
